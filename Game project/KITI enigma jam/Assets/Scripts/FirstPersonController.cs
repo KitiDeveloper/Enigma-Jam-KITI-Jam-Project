@@ -7,9 +7,17 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
     public bool canMove { get; private set; } = true;
+    private bool isRunning => canSprint && Input.GetKey(RunKey);
+
+    [Header("Functional Bools")]
+    [SerializeField] private bool canSprint = true;
+
+    [Header("Controls")]
+    [SerializeField] private KeyCode RunKey = KeyCode.LeftShift;
 
     [Header("Movement Parameter")]
     [SerializeField] private float walkSpeed = 3.0f;
+    [SerializeField] private float runSpeed = 6.0f;
     [SerializeField] private float gravity = 30.0f;
 
     [Header("Look Parameter")]
@@ -51,7 +59,7 @@ public class FirstPersonController : MonoBehaviour
     private void HandleMovementInput()
     {
         //Gets the WASD input from the user
-        currentInput = new Vector2(walkSpeed * Input.GetAxis("Vertical"), walkSpeed * Input.GetAxis("Horizontal"));
+        currentInput = new Vector2((isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical"), walkSpeed * Input.GetAxis("Horizontal"));
 
         //Makes the player move on the x and y
         float moveDirectionY = moveDirection.y;
@@ -63,7 +71,7 @@ public class FirstPersonController : MonoBehaviour
     {
         rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upLookLimit, downLookLimit);
-        playerCamera.transform.localRotation =quaternion.Euler(rotationX, 0, 0);
+        playerCamera.transform.localRotation = quaternion.Euler(rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
     }
 
