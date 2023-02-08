@@ -9,18 +9,22 @@ public class FirstPersonController : MonoBehaviour
     public bool canMove { get; private set; } = true;
     private bool isRunning => canRun && Input.GetKey(RunKey);
     private bool shouldJump => Input.GetKeyDown(JumpKey) && characterController.isGrounded;
+    private bool shouldCrouch => Input.GetKeyDown(CrouchKey) && !duringCrouchAnimation && characterController.isGrounded;
 
     [Header("Functional Bools")]
     [SerializeField] private bool canRun = true;
     [SerializeField] private bool canJump = true;
+    [SerializeField] private bool canCrouch = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode RunKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode JumpKey = KeyCode.Space;
+    [SerializeField] private KeyCode CrouchKey = KeyCode.LeftControl;
 
     [Header("Movement Parameter")]
     [SerializeField] private float walkSpeed = 3.0f;
     [SerializeField] private float runSpeed = 6.0f;
+    [SerializeField] private float crouchSpeed = 3.0f;
 
     [Header("Look Parameter")]
     [SerializeField, Range(0.01f, 10)] private float lookSpeedX = 2.0f;
@@ -28,9 +32,18 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField, Range(0.01f, 2)] private float upLookLimit = 2.0f;
     [SerializeField, Range(0.01f, 2)] private float downLookLimit = 2.0f;
 
-    [Header("Look Parameter")]
+    [Header("Jump Parameter")]
     [SerializeField] private float jumpForce = 8.0f;
     [SerializeField] private float gravity = 30.0f;
+
+    [Header("Crouch Parameter")]
+    [SerializeField] private float crouchHeight = 0.9f;
+    [SerializeField] private float standingHeight = 1.8f;
+    [SerializeField] private float timeToCrouch = 0.25f;
+    [SerializeField] private Vector3 crouchingCentre = new Vector3(0, 0.3f, 0);
+    [SerializeField] private Vector3 standingCentre = new Vector3(0, 0, 0);
+    private bool isCrouching;
+    private bool duringCrouchAnimation;
 
     private Camera playerCamera;
     private CharacterController characterController;
@@ -62,6 +75,10 @@ public class FirstPersonController : MonoBehaviour
             {
                 HandleJump();
             }
+            if(canCrouch)
+            {
+                HandleCrouch();
+            }
 
             ApplyFinalMovements();
         }
@@ -70,7 +87,7 @@ public class FirstPersonController : MonoBehaviour
     private void HandleMovementInput()
     {
         //Gets the WASD input from the user
-        currentInput = new Vector2((isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical"), walkSpeed * Input.GetAxis("Horizontal"));
+        currentInput = new Vector2((isCrouching ? crouchSpeed : isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical"), (isCrouching ? crouchSpeed : isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal"));
 
         //Makes the player move on the x and y
         float moveDirectionY = moveDirection.y;
@@ -92,6 +109,45 @@ public class FirstPersonController : MonoBehaviour
         {
             moveDirection.y = jumpForce;
         }
+    }
+
+    private void HandleCrouch()
+    {
+        if(shouldCrouch)
+        {
+            StartCoroutine(CrouchStand());
+        }
+    }
+
+    private IEnumerator CrouchStand()
+    {
+        if (isCrouching && Physics.Raycast(playerCamera.transform.position, Vector3.up, 1f))
+        {
+            yield break;
+        }
+
+        duringCrouchAnimation = true;
+
+        float timeElapsed = 0;
+        float targetHeight = isCrouching ? standingHeight : crouchHeight;
+        float currentheight = characterController.height;
+        Vector3 targetCentre = isCrouching ? standingCentre : crouchingCentre;
+        Vector3 currentCentre = characterController.center;
+
+        while(timeElapsed < timeToCrouch)
+        {
+            characterController.height = Mathf.Lerp(currentheight, targetHeight, timeElapsed / timeToCrouch);
+            characterController.center = Vector3.Lerp(currentCentre, targetCentre, timeElapsed / timeToCrouch);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        characterController.height = targetHeight;
+        characterController.center = targetCentre;
+
+        isCrouching = !isCrouching;
+
+        duringCrouchAnimation = false;
     }
 
     private void ApplyFinalMovements()
