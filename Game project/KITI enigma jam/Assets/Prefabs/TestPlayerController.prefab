@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50.011017
+  field of view: 39.417618
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -187,9 +187,11 @@ MonoBehaviour:
   canCrouch: 1
   hasHeadBob: 1
   willSlideOnSlopes: 1
+  canZoom: 1
   RunKey: 304
   JumpKey: 32
   CrouchKey: 306
+  ZoomKey: 324
   walkSpeed: 4
   runSpeed: 8
   crouchSpeed: 1.5
@@ -211,3 +213,5 @@ MonoBehaviour:
   RunBobAmount: 0.11
   crouchBobspeed: 14
   crouchBobAmount: 0.025
+  timeToZoom: 0.3
+  zoomFOV: 20
