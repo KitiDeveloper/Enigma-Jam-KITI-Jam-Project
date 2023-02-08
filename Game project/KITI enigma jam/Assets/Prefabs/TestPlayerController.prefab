@@ -165,7 +165,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1.8
   m_Radius: 0.4
-  m_SlopeLimit: 45
+  m_SlopeLimit: 35
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -186,12 +186,14 @@ MonoBehaviour:
   canJump: 1
   canCrouch: 1
   hasHeadBob: 1
+  willSlideOnSlopes: 1
   RunKey: 304
   JumpKey: 32
   CrouchKey: 306
   walkSpeed: 4
   runSpeed: 8
   crouchSpeed: 1.5
+  slopeSpeed: 8
   lookSpeedX: 3
   lookSpeedY: 0.07
   upLookLimit: 1
