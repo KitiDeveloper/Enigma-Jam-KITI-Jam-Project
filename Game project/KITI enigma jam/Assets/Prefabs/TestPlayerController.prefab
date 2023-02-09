@@ -188,10 +188,12 @@ MonoBehaviour:
   hasHeadBob: 1
   willSlideOnSlopes: 1
   canZoom: 1
+  canInteract: 1
   RunKey: 304
   JumpKey: 32
   CrouchKey: 306
   ZoomKey: 324
+  InteractKey: 323
   walkSpeed: 4
   runSpeed: 8
   crouchSpeed: 1.5
@@ -215,3 +217,8 @@ MonoBehaviour:
   crouchBobAmount: 0.025
   timeToZoom: 0.3
   zoomFOV: 20
+  interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
+  interactionDistance: 2
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 512
