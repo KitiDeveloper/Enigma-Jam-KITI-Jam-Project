@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 107
+  controlID: 64
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 96
+  controlID: 75
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 97
+  controlID: 76
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,23 +348,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\KitiM\Documents\GitHub\Enigma-Jam-KITI-Jam-Project\Game
     project\KITI enigma jam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 129}
-    m_SelectedIDs: 886d0000
-    m_LastClickedID: 28040
-    m_ExpandedIDs: 000000006c6d00006e6d0000706d0000726d0000746d0000766d0000786d000000ca9a3b
+    scrollPos: {x: 0, y: 165}
+    m_SelectedIDs: 846d0000
+    m_LastClickedID: 28036
+    m_ExpandedIDs: 000000006c6d00006e6d0000706d0000726d0000746d0000766d0000786d00007e6d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300005c8500008685000080870000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -522,23 +522,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 94dbffffa6edffff40f8ffff18fbffffe07900000c7b0000ec7b0000ea7d0000847e0000b27e0000
+      m_SelectedIDs: 366b0000
+      m_LastClickedID: 27446
+      m_ExpandedIDs: 18fbffff186b0000b26b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cube (6)
-        m_OriginalName: Cube (6)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 32238
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -807,9 +807,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3582.8098, y: 8.523765, z: 3235.1023}
+    m_Target: {x: 3523.6753, y: -0.95117855, z: 3245.9734}
     speed: 2
-    m_Value: {x: 3582.8098, y: 8.523765, z: 3235.1023}
+    m_Value: {x: 3523.6753, y: -0.95117855, z: 3245.9734}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -856,13 +856,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.18426175, y: -0.4748711, z: 0.101393715, w: 0.855011}
+    m_Target: {x: 0.25665465, y: -0.54589015, z: 0.17931388, w: 0.7776669}
     speed: 2
-    m_Value: {x: 0.18592876, y: -0.47068384, z: 0.10123134, w: 0.8565276}
+    m_Value: {x: 0.25682232, y: -0.5445088, z: 0.17885834, w: 0.77817875}
   m_Size:
-    m_Target: 7.497692
+    m_Target: 15.685662
     speed: 2
-    m_Value: 7.174825
+    m_Value: 15.010203
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
