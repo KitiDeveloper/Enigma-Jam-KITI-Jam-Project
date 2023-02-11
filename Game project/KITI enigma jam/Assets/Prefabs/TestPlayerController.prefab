@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 7998113212951580524}
   - component: {fileID: 7998113212951580527}
   - component: {fileID: 7998113212951580526}
+  - component: {fileID: 1138831450}
   m_Layer: 0
   m_Name: TestPlayerController
   m_TagString: Player
@@ -188,12 +189,10 @@ MonoBehaviour:
   hasHeadBob: 1
   willSlideOnSlopes: 1
   canZoom: 1
-  canInteract: 1
   RunKey: 304
   JumpKey: 32
   CrouchKey: 306
   ZoomKey: 324
-  InteractKey: 323
   walkSpeed: 4
   runSpeed: 8
   crouchSpeed: 1.5
@@ -222,3 +221,22 @@ MonoBehaviour:
   interactionLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &1138831450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998113212951580561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7534c119903f74b4eb59587ea58a7760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startCastTime: 0.1
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _interactionRayPoint: {x: 0, y: 0, z: 0}
+  _interactionDistance: 3
+  _interactKey: 323

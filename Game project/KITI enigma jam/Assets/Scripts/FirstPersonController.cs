@@ -19,14 +19,12 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool hasHeadBob = true;
     [SerializeField] private bool willSlideOnSlopes = true;
     [SerializeField] private bool canZoom = true;
-    [SerializeField] private bool canInteract = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode RunKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode JumpKey = KeyCode.Space;
     [SerializeField] private KeyCode CrouchKey = KeyCode.LeftControl;
     [SerializeField] private KeyCode ZoomKey = KeyCode.Mouse1;
-    [SerializeField] private KeyCode InteractKey = KeyCode.Mouse0;
 
     [Header("Movement Parameter")]
     [SerializeField] private float walkSpeed = 3.0f;
@@ -106,7 +104,6 @@ public class FirstPersonController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("test");
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
         defualtYPos = playerCamera.transform.localPosition.y;
@@ -139,11 +136,7 @@ public class FirstPersonController : MonoBehaviour
             {
                 HandleZoom();
             }
-            if (canInteract)
-            {
-                HandleInteractionCheck();
-                HandleInteractionInput();
-            }
+
 
             ApplyFinalMovements();
         }
@@ -221,34 +214,6 @@ public class FirstPersonController : MonoBehaviour
             }
 
             zoomRoutine = StartCoroutine(ToggleZoom(false));
-        }
-    }
-
-    private void HandleInteractionCheck()
-    {
-        if(Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance))
-        {
-            if(hit.collider.gameObject.layer == 9 && (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID()))
-            {
-                hit.collider.TryGetComponent(out currentInteractable);
-
-                if(currentInteractable)
-                {
-                    currentInteractable.OnFocus();
-                }
-            }
-        }
-        else if(currentInteractable)
-        {
-            currentInteractable.OnLoseFocus();
-            currentInteractable = null;
-        }
-    }
-    private void HandleInteractionInput()
-    {
-        if(Input.GetKeyDown(InteractKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance, interactionLayer))
-        {
-            currentInteractable.OnInteract();
         }
     }
 
