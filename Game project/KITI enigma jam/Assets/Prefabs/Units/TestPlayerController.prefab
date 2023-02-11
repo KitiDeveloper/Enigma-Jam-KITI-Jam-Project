@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7998113212951580527}
   - component: {fileID: 7998113212951580526}
   - component: {fileID: 1138831450}
+  - component: {fileID: 1138831451}
   m_Layer: 0
   m_Name: TestPlayerController
   m_TagString: Player
@@ -216,11 +217,6 @@ MonoBehaviour:
   crouchBobAmount: 0.025
   timeToZoom: 0.3
   zoomFOV: 20
-  interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
-  interactionDistance: 2
-  interactionLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!114 &1138831450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,9 +230,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startCastTime: 0.1
-  _layerMask:
+  _interactableLayerMask:
     serializedVersion: 2
-    m_Bits: 512
-  _interactionRayPoint: {x: 0, y: 0, z: 0}
-  _interactionDistance: 3
+    m_Bits: 0
+  _castOffset: {x: 0, y: 0, z: 0}
+  _castDistance: 3
   _interactKey: 323
+--- !u!114 &1138831451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998113212951580561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7a429c9a6649aaa412cc1968f630a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startCastTime: 0.1
+  _interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  _castOffset: {x: 0, y: 0, z: 0}
+  _castDistance: 100

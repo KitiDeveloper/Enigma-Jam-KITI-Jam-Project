@@ -86,12 +86,6 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    [Header("Interaction")]
-    [SerializeField] private Vector3 interactionRayPoint = default;
-    [SerializeField] private float interactionDistance = default;
-    [SerializeField] private LayerMask interactionLayer = default;
-    private Interactable currentInteractable;
-
 
     private Camera playerCamera;
     private CharacterController characterController;
