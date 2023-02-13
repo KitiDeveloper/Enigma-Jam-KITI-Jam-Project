@@ -1,0 +1,4 @@
+Please import SRP packs only if your project is using HD or URP.
+If you import this to standard project you will get errors.
+Import proper RP compatibility pack to proper engine version for 2021.3 URP 12.1 please use our 12.1 URP 2021.3 Meadow environment compatibility pack.
+If you use higher RP versions please use atm 12.1 support packs. 
