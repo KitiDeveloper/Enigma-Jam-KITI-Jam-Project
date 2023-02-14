@@ -28,7 +28,7 @@ namespace Units.RayCaster {
 
         private void HandleInteractionInput() {
             if (Input.GetKeyDown(_interactKey) && _currentInteractable != null) {
-                Debug.Log($"interracting with {_currentInteractable.transform.name}");
+                // Debug.Log($"interracting with {_currentInteractable.transform.name}");
                 _currentInteractable.OnInteract();
             }
         }
@@ -36,7 +36,7 @@ namespace Units.RayCaster {
         protected override void HandleInteractionCheck() {
             var hitObject = CastForObject();
             if (hitObject.collider != null) {
-                Debug.Log(hitObject.collider);
+                // Debug.Log(hitObject.collider);
                 TryFocusOnObject(hitObject);
             } else if (_currentInteractable != null) {
                 LoseFocusOfCurrentObject();
