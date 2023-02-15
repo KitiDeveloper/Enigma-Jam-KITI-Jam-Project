@@ -79,6 +79,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private AudioClip[] carpetClips = default;
     [SerializeField] private AudioClip[] brokenTileClips = default;
     [SerializeField] private AudioClip[] grassClips = default;
+    [SerializeField] private AudioClip[] defualtClips = default;
     private float footStepTimer = 0;
     private float getCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultipler : isRunning ? baseStepSpeed * runStepMultipler : baseStepSpeed;
 
@@ -301,7 +302,7 @@ public class FirstPersonController : MonoBehaviour
 
         if(footStepTimer <= 0)
         {
-            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 2))
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 6))
             {
                 switch (hit.collider.tag)
                 {
@@ -321,7 +322,7 @@ public class FirstPersonController : MonoBehaviour
                         footStepAudioSource.PlayOneShot(brokenTileClips[UnityEngine.Random.Range(0, brokenTileClips.Length - 1)]);
                         break;
                     default:
-                        footStepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
+                        footStepAudioSource.PlayOneShot(defualtClips[UnityEngine.Random.Range(0, defualtClips.Length - 1)]);
                         break;
                 }
             }
