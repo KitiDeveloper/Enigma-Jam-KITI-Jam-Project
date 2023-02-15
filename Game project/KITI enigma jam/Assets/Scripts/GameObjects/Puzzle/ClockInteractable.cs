@@ -31,9 +31,17 @@ namespace GameObjects.Puzzle
     
     public class ClockInteractable : Interactable
     {
+        [SerializeField] private float cooldownBetweenSkips = 1.0f;
+        [SerializeField] private TimeSkipEffect timeSkipEffect;
         [SerializeField] private ClockState[] clockStates;
         [SerializeField] private int state;
         [SerializeField] private HideByClock[] hideByClockObjects;
+        private float cooldown;
+
+        private void Update()
+        {
+            cooldown = Math.Max(0, cooldown - Time.deltaTime);
+        }
 
         private void Start()
         {
@@ -50,10 +58,13 @@ namespace GameObjects.Puzzle
 
         public override void OnInteract()
         {
+            if (cooldown > 0) return;
+            cooldown = cooldownBetweenSkips;
             clockStates[state].SetActive(false);
             state = (state + 1) % clockStates.Length;
             clockStates[state].SetActive(true);
             UpdateHiddenObjects();
+            timeSkipEffect.StartEffect();
         }
 
         private void UpdateHiddenObjects()
