@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace GameObjects.Puzzle
 {
@@ -10,10 +11,27 @@ namespace GameObjects.Puzzle
         [SerializeField] internal int[] statesToShowIn;
         [SerializeField] internal GameObject gameObject;
     }
+
+    [Serializable]
+    public class ClockState
+    {
+        [SerializeField] internal GameObject clockObject;
+        [SerializeField] internal Material skybox;
+
+        internal void SetActive(bool active)
+        {
+            clockObject.SetActive(active);
+            if (active)
+            {
+                RenderSettings.skybox = skybox;
+                DynamicGI.UpdateEnvironment();
+            }
+        }
+    }
     
     public class ClockInteractable : Interactable
     {
-        [SerializeField] private GameObject[] clockStates;
+        [SerializeField] private ClockState[] clockStates;
         [SerializeField] private int state;
         [SerializeField] private HideByClock[] hideByClockObjects;
 
