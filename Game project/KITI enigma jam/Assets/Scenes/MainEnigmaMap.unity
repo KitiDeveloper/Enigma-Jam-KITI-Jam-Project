@@ -1128,7 +1128,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7998113213045135086}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &190963807
+--- !u!82 &190963813
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1138,10 +1138,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ccd62410b79bdec41ad88ea7ddee1b22, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.4
-  m_Pitch: 0.9
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -10078,6 +10078,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FarmHouseComplete
       objectReference: {fileID: 0}
+    - target: {fileID: 6827513208176914596, guid: cf05286710078e148b0e596272262583,
+        type: 3}
+      propertyPath: m_TagString
+      value: FootSteps/Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877579534276656852, guid: cf05286710078e148b0e596272262583,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf05286710078e148b0e596272262583, type: 3}
 --- !u!1001 &7998113213045135086
@@ -10087,6 +10097,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 190963807, guid: b09765c4b0f61a04da49c40602dd6e2a, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_RootOrder
@@ -10142,6 +10156,266 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: baseStepSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: crouchBobspeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: footStepAudioSource
+      value: 
+      objectReference: {fileID: 190963813}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.size
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: carpetClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc81e338c93ab2543a1f785e3de4cb7e, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 76f2458bc830c8b49b2894295ab1e885, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ceffa5725faecf40ba4407eb95e2db6, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 10fb440ac88962a44904285a3cddd11e, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: tileClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5037595462d958e44997589e1af03dcb, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8904e8d7e70b5cd4bba962a9d9a0331d, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a334006913f0fef458cf23b97cc9fc68, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f12a65dea44026f449a4f16f3a2eec83, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1f37333fbc8f8348b6e497f0ac650c0, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: woodClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: b3fac0f735cab664b96d81838d41bc27, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c1b1b7d17950554e99ecc14d9ce2b9c, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c964da1fb596d3844a42045501d16bcf, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65ff14feada8563448ac1608c488b41a, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 47159529b703cff40bba30f907723257, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 694eab1b829a54b4ebb8885990b8db6f, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b901deb1d211f84cb66142fe7a20d29, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9abe466f0d520af458faafdf7039e29f, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1914aaa5044203c458e332926d4005f2, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: c76bb23a594ac494dbf07b19c428b8f5, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8cae1532d5754b649a1537309b96583d, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: carpetClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a911b78858cbce44fbdc1a524cd2a5df, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: carpetClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e06504b65f524743a469e9991ac2e90, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: carpetClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f74ce8b8219041439371e4f3e841916, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: carpetClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d091d84cc5559c49b68e630fd207134, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 857e13957d17a074781d84f20553eea0, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 81f63607ae7227a4bb5e2acbbe967145, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8dba3910bb7e7c942b965a1850ec68f3, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 591a811fc84aee34d894c7e35caeffba, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[14]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65924f75ebafd2e488545a827cda978a, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: e362c74cfd324b44d80edf185f68cc50, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e68f97217c637b49b01cf20e16bcf4b, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 8300000, guid: f8fe682e84e6aab4fb32258ef745cebf, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: bc231bfca94633d4e995da1f9df359d7, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: 25efd9313d29599419553d1b3a86bb06, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 40d9b4279da708745908d0fa00e15782, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[21]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bcc375b825a2194e8d835e48d203a60, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: 93a5434090146e24d9df2390dcf18dbd, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[23]
+      value: 
+      objectReference: {fileID: 8300000, guid: 91632a875ef6c0f429f1e309367f84d6, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: f115b7cca59b2fa428540615011c65a5, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: grassClips.Array.data[25]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8819c59928782914fbc2e2fc929955ba, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: brokenTileClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: brokenTileClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2860ee96ba4fbf44da7bfb2664fd6473, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: brokenTileClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a5844d78b377f7478ddd84f0e66324b, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: brokenTileClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e4987f9e1cea58419b20b5ea62794d0, type: 3}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: brokenTileClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a73040b129473e46baf02c9e34e83e5, type: 3}
     - target: {fileID: 7998113212951580561, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_Name

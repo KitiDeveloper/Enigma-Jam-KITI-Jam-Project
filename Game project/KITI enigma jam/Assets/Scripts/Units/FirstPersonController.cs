@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
@@ -19,6 +20,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool hasHeadBob = true;
     [SerializeField] private bool willSlideOnSlopes = true;
     [SerializeField] private bool canZoom = true;
+    [SerializeField] private bool useFootsteps = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode RunKey = KeyCode.LeftShift;
@@ -66,6 +68,19 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float zoomFOV = 30f;
     private float defualtFOV;
     private Coroutine zoomRoutine;
+
+    [Header("Footstep Parameters")]
+    [SerializeField] private float baseStepSpeed = 0.5f;
+    [SerializeField] private float crouchStepMultipler = 1.5f;
+    [SerializeField] private float runStepMultipler = 0.6f;
+    [SerializeField] private AudioSource footStepAudioSource = default;
+    [SerializeField] private AudioClip[] woodClips = default;
+    [SerializeField] private AudioClip[] tileClips = default;
+    [SerializeField] private AudioClip[] carpetClips = default;
+    [SerializeField] private AudioClip[] brokenTileClips = default;
+    [SerializeField] private AudioClip[] grassClips = default;
+    private float footStepTimer = 0;
+    private float getCurrentOffset => isCrouching ? baseStepSpeed * crouchStepMultipler : isRunning ? baseStepSpeed * runStepMultipler : baseStepSpeed;
 
     //sliding params
     private Vector3 hitPointNormal;
@@ -129,6 +144,10 @@ public class FirstPersonController : MonoBehaviour
             if(canZoom)
             {
                 HandleZoom();
+            }
+            if (useFootsteps)
+            {
+                HandleFootSteps();
             }
 
 
@@ -271,5 +290,43 @@ public class FirstPersonController : MonoBehaviour
         }
 
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void HandleFootSteps()
+    {
+        if (!characterController.isGrounded) return;
+        if (currentInput == Vector3.zero) return;
+
+        footStepTimer -= Time.deltaTime;
+
+        if(footStepTimer <= 0)
+        {
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 2))
+            {
+                switch (hit.collider.tag)
+                {
+                    case "FootSteps/Wood":
+                        footStepAudioSource.PlayOneShot(woodClips[UnityEngine.Random.Range(0, woodClips.Length - 1)]);
+                        break;
+                    case "FootSteps/Grass":
+                        footStepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
+                        break;
+                    case "FootSteps/Tile":
+                        footStepAudioSource.PlayOneShot(tileClips[UnityEngine.Random.Range(0, tileClips.Length - 1)]);
+                        break;
+                    case "FootSteps/Carpet":
+                        footStepAudioSource.PlayOneShot(carpetClips[UnityEngine.Random.Range(0, carpetClips.Length - 1)]);
+                        break;
+                    case "FootSteps/BrokenTile":
+                        footStepAudioSource.PlayOneShot(brokenTileClips[UnityEngine.Random.Range(0, brokenTileClips.Length - 1)]);
+                        break;
+                    default:
+                        footStepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
+                        break;
+                }
+            }
+
+            footStepTimer = getCurrentOffset;
+        }
     }
 }
