@@ -2,7 +2,7 @@
 
 namespace GameObjects.Puzzle
 {
-    public class ClockInteractableState : Interactable
+    public class ClockInteractable : Interactable
     {
         private ClockPuzzle clockPuzzle;
 

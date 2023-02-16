@@ -35,7 +35,7 @@ namespace GameObjects.Puzzle
         [SerializeField] private float cooldownBetweenSkips = 1.0f;
         [SerializeField] private TimeSkipEffect timeSkipEffect;
         [SerializeField] private ClockTimeState[] clockStates;
-        [SerializeField] private ClockInteractableState[] clockInteractables;
+        [SerializeField] private ClockInteractable[] clockInteractables;
         [FormerlySerializedAs("state")] [SerializeField] private int timeState;
         [SerializeField] private int puzzleProgressState;
         [SerializeField] private PuzzleState[] puzzleStatesDefinition;
