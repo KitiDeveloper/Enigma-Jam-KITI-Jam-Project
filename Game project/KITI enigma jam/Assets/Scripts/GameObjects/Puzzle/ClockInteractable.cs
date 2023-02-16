@@ -15,12 +15,12 @@ namespace GameObjects.Puzzle
     [Serializable]
     public class ClockState
     {
-        [SerializeField] internal GameObject clockObject;
+        [SerializeField] internal ClockInteractableState clockObject;
         [SerializeField] internal Material skybox;
 
         internal void SetActive(bool active)
         {
-            clockObject.SetActive(active);
+            clockObject.gameObject.SetActive(active);
             if (active)
             {
                 RenderSettings.skybox = skybox;
@@ -52,6 +52,7 @@ namespace GameObjects.Puzzle
                 {
                     clockStates[i].SetActive(false);
                 }
+                clockStates[i].clockObject.SetParent(this);
             }
             UpdateHiddenObjects();
         }

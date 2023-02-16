@@ -123,108 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &190963806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7998113212951580561, guid: b09765c4b0f61a04da49c40602dd6e2a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7998113213045135086}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &190963807
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190963806}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ccd62410b79bdec41ad88ea7ddee1b22, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &190963808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
@@ -293,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523130068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.7938795, y: 1.1760001, z: 7.7970295}
+  m_LocalPosition: {x: 12.7938795, y: 1.1760001, z: 10.826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,6 +273,7 @@ GameObject:
   - component: {fileID: 561809187}
   - component: {fileID: 561809186}
   - component: {fileID: 561809185}
+  - component: {fileID: 561809188}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -460,6 +359,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561809182}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &561809188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561809182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efb972b104f4199904042b066af18c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &566983911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,7 +1138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683593510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.399, y: 1.1760001, z: 10.18}
+  m_LocalPosition: {x: 11.444, y: 1.1760001, z: 9.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1679,6 +1590,7 @@ GameObject:
   - component: {fileID: 1896499834}
   - component: {fileID: 1896499833}
   - component: {fileID: 1896499832}
+  - component: {fileID: 1896499835}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1694,7 +1606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896499830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.864, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1764,6 +1676,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896499830}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1896499835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896499830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efb972b104f4199904042b066af18c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1955651607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1760,7 @@ GameObject:
   - component: {fileID: 2036442136}
   - component: {fileID: 2036442135}
   - component: {fileID: 2036442134}
+  - component: {fileID: 2036442137}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1851,7 +1776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036442132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.049, z: 0}
+  m_LocalPosition: {x: 0, y: -0.646, z: 0}
   m_LocalScale: {x: 1, y: 0.55146, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1922,6 +1847,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036442132}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2036442137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036442132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efb972b104f4199904042b066af18c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2104538723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,8 +1869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104538724}
   - component: {fileID: 2104538725}
-  - component: {fileID: 2104538726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104538723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.54, y: 1.21, z: 9.74}
+  m_LocalPosition: {x: 11.54, y: 2.858, z: 9.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1970,12 +1906,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3444c42832124aa0860752183960849e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownBetweenSkips: 1
+  timeSkipEffect: {fileID: 2140297551}
   clockStates:
-  - clockObject: {fileID: 561809182}
+  - clockObject: {fileID: 561809188}
     skybox: {fileID: 2100000, guid: 99ed541fff926cd4383cfe142cb187c4, type: 2}
-  - clockObject: {fileID: 1896499830}
+  - clockObject: {fileID: 1896499835}
     skybox: {fileID: 2100000, guid: 63800d53ceda11d469f10c036d33b0ba, type: 2}
-  - clockObject: {fileID: 2036442132}
+  - clockObject: {fileID: 2036442137}
     skybox: {fileID: 2100000, guid: dd158ea7a87b7b241a303a578b13216d, type: 2}
   state: 0
   hideByClockObjects:
@@ -1983,20 +1921,6 @@ MonoBehaviour:
     gameObject: {fileID: 523130068}
   - statesToShowIn: 02000000
     gameObject: {fileID: 1683593510}
-  timeSkipEffect: {fileID: 2140297551}
---- !u!65 &2104538726
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104538723}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2140297546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,8 +1948,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140297546}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.007, y: 0, z: 0.561}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.007003695, y: 0, z: 0.5610006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2128,17 +2052,17 @@ PrefabInstance:
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.8
+      value: -36.031
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.92
+      value: 5.404
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -84.2
+      value: -79.268
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
