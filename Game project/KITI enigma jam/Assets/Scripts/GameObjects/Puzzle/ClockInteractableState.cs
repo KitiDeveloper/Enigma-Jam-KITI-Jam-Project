@@ -4,26 +4,26 @@ namespace GameObjects.Puzzle
 {
     public class ClockInteractableState : Interactable
     {
-        private ClockInteractable clockInteractable;
+        private ClockPuzzle clockPuzzle;
 
-        public void SetParent(ClockInteractable interactable)
+        public void SetParent(ClockPuzzle puzzle)
         {
-            clockInteractable = interactable;
+            clockPuzzle = puzzle;
         }
         
         public override void OnInteract()
         {
-            clockInteractable.OnInteract();
+            clockPuzzle.OnInteract();
         }
 
         public override void OnFocus()
         {
-            clockInteractable.OnFocus();
+            clockPuzzle.OnFocus();
         }
 
         public override void OnLoseFocus()
         {
-            clockInteractable.OnLoseFocus();
+            clockPuzzle.OnLoseFocus();
         }
     }
 }
