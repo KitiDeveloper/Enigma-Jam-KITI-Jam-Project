@@ -19,12 +19,14 @@ namespace GameObjects.Puzzle
     public class ClockTimeState
     {
         [SerializeField] internal Material skybox;
+        [SerializeField] internal Color fogColor;
 
         internal void SetActive(bool active)
         {
             if (active)
             {
                 RenderSettings.skybox = skybox;
+                RenderSettings.fogColor = fogColor;
                 DynamicGI.UpdateEnvironment();
             }
         }

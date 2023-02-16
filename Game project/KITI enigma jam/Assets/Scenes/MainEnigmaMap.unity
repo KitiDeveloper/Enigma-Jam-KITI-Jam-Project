@@ -9432,7 +9432,9 @@ MonoBehaviour:
   timeSkipEffect: {fileID: 7998113213045135087}
   clockStates:
   - skybox: {fileID: 2100000, guid: 99ed541fff926cd4383cfe142cb187c4, type: 2}
+    fogColor: {r: 0.6156863, g: 0.60784316, b: 0.6156863, a: 1}
   - skybox: {fileID: 2100000, guid: dd158ea7a87b7b241a303a578b13216d, type: 2}
+    fogColor: {r: 0.2959238, g: 0.36810127, b: 0.4716981, a: 1}
   clockInteractables:
   - {fileID: 531722195}
   - {fileID: 615557087}
@@ -9484,14 +9486,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815339989}
-  m_LocalRotation: {x: -0, y: -0.5909376, z: -0, w: 0.8067173}
-  m_LocalPosition: {x: -0.084, y: -0.749, z: 0.068}
-  m_LocalScale: {x: 0.062060025, y: 0.08035174, z: 0.19113}
+  m_LocalRotation: {x: -0.44082406, y: -0.5283867, z: -0.07856607, w: 0.7213245}
+  m_LocalPosition: {x: -0.084, y: -0.705, z: 0.068}
+  m_LocalScale: {x: 0.053652756, y: 0.062491152, z: 0.28105667}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808829764}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -72.447, z: 0}
+  m_LocalEulerAnglesHint: {x: -45.97, y: -85.63, z: 30.476}
 --- !u!65 &1815339991
 BoxCollider:
   m_ObjectHideFlags: 0
