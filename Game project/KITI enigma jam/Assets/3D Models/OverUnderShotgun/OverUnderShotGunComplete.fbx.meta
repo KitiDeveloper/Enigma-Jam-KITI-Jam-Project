@@ -3,7 +3,47 @@ guid: 325e6427f1544a143acd3db1f6cae637
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunBarrel
+    second: {fileID: 2100000, guid: b8b6d8ca410216a46b570c0bddf5e329, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunHandguard
+    second: {fileID: 2100000, guid: a4839175e98828849af01a38732bbf94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunHinge
+    second: {fileID: 2100000, guid: cfcb90385c049724a98b54b071289dfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunReceiver
+    second: {fileID: 2100000, guid: 7078293437dc51b4bbf7b356a33282b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunStock
+    second: {fileID: 2100000, guid: 71d890f4e2d04964387953dec61ad8b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunSwitch
+    second: {fileID: 2100000, guid: 73326a5a61fa87147ad949a2c46b9d9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunTrigger
+    second: {fileID: 2100000, guid: 288b78b3280650747a15e46818551b3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShotgunTriggerGuard
+    second: {fileID: 2100000, guid: 18d2d9871eabd8c45a7f35720fbe191b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: a0dbfae572c1ffc4d903000b4da2d17a
+guid: 909c9ab4d0f3d42499f7f61931ac7d11
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GrandFatherBackPlate
-    second: {fileID: 2100000, guid: 8fbbc75429703de48a480ad247f131cf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GrandFatherClockBase
-    second: {fileID: 2100000, guid: 6cac3944a83a98447af9a034536258de, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GrandFatherClockFace
-    second: {fileID: 2100000, guid: f6ed576c86b38354daa7afcef01c2639, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

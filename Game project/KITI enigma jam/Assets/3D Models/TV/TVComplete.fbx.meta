@@ -3,7 +3,27 @@ guid: e8677e7e7069aae4eb345dbbbbe0b41f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrassFurnising
+    second: {fileID: 2100000, guid: 99d3cce6488b01c47a044cc9edfcb7ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScreenFrame
+    second: {fileID: 2100000, guid: df2ff0fd8364317488b2ecdae6d161e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TVBase
+    second: {fileID: 2100000, guid: c8c3d6a5e2e15724e9b84e10a1256f8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TVScreen
+    second: {fileID: 2100000, guid: 804cecb09796f07489b52b80cf7cf6ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
