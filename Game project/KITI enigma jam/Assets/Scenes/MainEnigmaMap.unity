@@ -5124,22 +5124,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3527.719
+      value: 3527.684
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
@@ -5149,7 +5149,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3193.118
+      value: 3193.147
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8677e7e7069aae4eb345dbbbbe0b41f,
         type: 3}
@@ -5210,8 +5210,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.83128464, y: 1.054073, z: 0.8318514}
-  m_Center: {x: -0.003902836, y: 0.62398624, z: -0.08407417}
+  m_Size: {x: 0.83128464, y: 1.054073, z: 0.66338897}
+  m_Center: {x: -0.0039028376, y: 0.6239864, z: 0.00015734398}
 --- !u!1 &790863704
 GameObject:
   m_ObjectHideFlags: 0
@@ -10872,10 +10872,10 @@ MonoBehaviour:
     progressState: 0
     gameObjectsToShow:
     - {fileID: 531722193}
-    - {fileID: 0}
+    - {fileID: 1563841166}
     gameObjectToHide:
     - {fileID: 615557085}
-    - {fileID: 0}
+    - {fileID: 474356938}
     - {fileID: 1815339989}
     - {fileID: 1408330676}
   - timeState: 1
