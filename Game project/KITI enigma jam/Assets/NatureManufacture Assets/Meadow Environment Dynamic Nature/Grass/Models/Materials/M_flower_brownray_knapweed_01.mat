@@ -235,7 +235,7 @@ Material:
     - _ShiverDrag: 0.03
     - _Smoothness: 1
     - _SmoothnessPower: 0.6
-    - _SmoothnessRemapMax: 0.9999999
+    - _SmoothnessRemapMax: 0
     - _SmoothnessRemapMin: 0
     - _Specular: 0.02
     - _SrcBlend: 1

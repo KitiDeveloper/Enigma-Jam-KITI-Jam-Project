@@ -239,7 +239,7 @@ Material:
     - _ShiverDrag: 0.05
     - _Smoothness: 1
     - _SmoothnessPower: 0.367
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0
     - _SmoothnessRemapMin: 0
     - _Specular: 0.2
     - _SpecularAAScreenSpaceVariance: 0.1

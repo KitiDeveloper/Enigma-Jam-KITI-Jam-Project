@@ -528,7 +528,7 @@ Material:
     - _Smoothness2: 1
     - _Smoothness3: 1
     - _SmoothnessPower: 0
-    - _SmoothnessRemapMax: 0.1
+    - _SmoothnessRemapMax: 0
     - _SmoothnessRemapMax0: 0.375
     - _SmoothnessRemapMax1: 1
     - _SmoothnessRemapMax2: 1
