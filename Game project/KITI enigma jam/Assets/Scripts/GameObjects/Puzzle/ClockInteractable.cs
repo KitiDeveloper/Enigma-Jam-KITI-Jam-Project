@@ -4,7 +4,7 @@ namespace GameObjects.Puzzle
 {
     public class ClockInteractable : Interactable
     {
-        private ClockPuzzle clockPuzzle;
+        [SerializeField] private ClockPuzzle clockPuzzle;
 
         public void SetParent(ClockPuzzle puzzle)
         {
@@ -13,17 +13,15 @@ namespace GameObjects.Puzzle
         
         public override void OnInteract()
         {
-            clockPuzzle.OnInteract();
+            clockPuzzle.SwitchClockStates();
         }
 
         public override void OnFocus()
         {
-            clockPuzzle.OnFocus();
         }
 
         public override void OnLoseFocus()
         {
-            clockPuzzle.OnLoseFocus();
         }
     }
 }

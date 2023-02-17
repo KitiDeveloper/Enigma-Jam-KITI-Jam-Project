@@ -32,12 +32,11 @@ namespace GameObjects.Puzzle
         }
     }
     
-    public class ClockPuzzle : Interactable
+    public class ClockPuzzle : MonoBehaviour
     {
         [SerializeField] private float cooldownBetweenSkips = 1.0f;
         [SerializeField] private TimeSkipEffect timeSkipEffect;
         [SerializeField] private ClockTimeState[] clockStates;
-        [SerializeField] private ClockInteractable[] clockInteractables;
         [FormerlySerializedAs("state")] [SerializeField] private int timeState;
         [SerializeField] private int puzzleProgressState;
         [SerializeField] private PuzzleState[] puzzleStatesDefinition;
@@ -61,11 +60,6 @@ namespace GameObjects.Puzzle
                 }
             }
             
-            foreach (var clockInteractableState in clockInteractables)
-            {
-                clockInteractableState.SetParent(this);
-            }
-            
             UpdateHiddenObjects();
         }
 
@@ -74,7 +68,7 @@ namespace GameObjects.Puzzle
             puzzleProgressState++;
         }
 
-        public override void OnInteract()
+        public void SwitchClockStates()
         {
             if (cooldown > 0) return;
             cooldown = cooldownBetweenSkips;
@@ -96,14 +90,6 @@ namespace GameObjects.Puzzle
             {
                 o.SetActive(false);
             }
-        }
-
-        public override void OnFocus()
-        {
-        }
-
-        public override void OnLoseFocus()
-        {
         }
     }
 }

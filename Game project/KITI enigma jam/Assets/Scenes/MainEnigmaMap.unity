@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.35179263, g: 0.35906205, b: 0.4035657, a: 1}
+  m_IndirectSpecularColor: {r: 0.3517924, g: 0.35906196, b: 0.40356553, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1020,7 +1020,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808829764}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &154491215
 BoxCollider:
@@ -3158,7 +3158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808829764}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -17.092, y: -2.584, z: 17.07}
 --- !u!114 &531722195
 MonoBehaviour:
@@ -3172,6 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efb972b104f4199904042b066af18c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clockPuzzle: {fileID: 1808829765}
 --- !u!65 &531722196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4000,6 +4001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efb972b104f4199904042b066af18c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clockPuzzle: {fileID: 1808829765}
 --- !u!65 &615557088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8148,6 +8150,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a449fdfef477a44b93306cd72d67c6, type: 3}
+--- !u!1 &1408330676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408330680}
+  - component: {fileID: 1408330679}
+  - component: {fileID: 1408330678}
+  - component: {fileID: 1408330677}
+  m_Layer: 9
+  m_Name: Clock on wall not interactable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1408330677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408330676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1408330678
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408330676}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1408330679
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408330676}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1408330680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408330676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.963, y: 0, z: -1.842}
+  m_LocalScale: {x: 0.73314, y: 0.70819, z: 0.27194}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1808829764}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1451953983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4503350437748266, guid: 78f8e62ca5b7bcc41a94a992e4ba02fd,
@@ -10227,6 +10326,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 615557086}
+  - {fileID: 1408330680}
   - {fileID: 531722194}
   - {fileID: 154491214}
   - {fileID: 2091878963}
@@ -10253,9 +10353,6 @@ MonoBehaviour:
     fogColor: {r: 0.6156863, g: 0.60784316, b: 0.6156863, a: 1}
   - skybox: {fileID: 2100000, guid: dd158ea7a87b7b241a303a578b13216d, type: 2}
     fogColor: {r: 0.2959238, g: 0.36810127, b: 0.4716981, a: 1}
-  clockInteractables:
-  - {fileID: 531722195}
-  - {fileID: 615557087}
   timeState: 0
   puzzleProgressState: 0
   puzzleStatesDefinition:
@@ -10268,6 +10365,7 @@ MonoBehaviour:
     - {fileID: 615557085}
     - {fileID: 2091878962}
     - {fileID: 1815339989}
+    - {fileID: 1408330676}
   - timeState: 1
     progressState: 0
     gameObjectsToShow:
@@ -10277,6 +10375,17 @@ MonoBehaviour:
     gameObjectToHide:
     - {fileID: 531722193}
     - {fileID: 154491213}
+    - {fileID: 1408330676}
+  - timeState: 0
+    progressState: 1
+    gameObjectsToShow:
+    - {fileID: 1408330676}
+    - {fileID: 2091878962}
+    gameObjectToHide:
+    - {fileID: 531722193}
+    - {fileID: 154491213}
+    - {fileID: 615557085}
+    - {fileID: 1815339989}
 --- !u!1 &1815339989
 GameObject:
   m_ObjectHideFlags: 0
@@ -10310,7 +10419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808829764}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -45.97, y: -85.63, z: 30.476}
 --- !u!65 &1815339991
 BoxCollider:
@@ -10387,6 +10496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f7f8d15c5c4affb79412ef1992035b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clockPuzzle: {fileID: 1808829765}
 --- !u!224 &1818400502 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8943183944778275522, guid: 51020cc966cc8fc41a5baf248675f759,
@@ -11712,7 +11822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1808829764}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2091878964
 BoxCollider:
