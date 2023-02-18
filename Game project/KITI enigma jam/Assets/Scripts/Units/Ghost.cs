@@ -20,6 +20,7 @@ namespace Units {
 
         private void Awake() {
             _meshRenderer = GetComponent<MeshRenderer>();
+            _meshRenderer.enabled = false;
         }
 
         private void Start() {
