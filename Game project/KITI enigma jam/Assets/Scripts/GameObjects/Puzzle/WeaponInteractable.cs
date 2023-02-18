@@ -4,6 +4,7 @@ namespace GameObjects.Puzzle
 {
     public class WeaponInteractable : Interactable
     {
+        [SerializeField] private ClockPuzzleCounter clockPuzzleCounter;
         [SerializeField] private ClockPuzzle clockPuzzle;
         [SerializeField] private int finishTimeState;
         [SerializeField] private int finishProgressState;
@@ -12,7 +13,7 @@ namespace GameObjects.Puzzle
             clockPuzzle.SetTime(finishTimeState);
             clockPuzzle.SetPuzzleProgress(finishProgressState);
             clockPuzzle.UpdateObjects();
-            Debug.Log("Finished puzzle - spawn ghost");
+            clockPuzzleCounter.PuzzleSolved();
         }
 
         public override void OnFocus()
