@@ -34,7 +34,7 @@ namespace GameObjects.Puzzle
     
     public class ClockPuzzle : MonoBehaviour
     {
-        [SerializeField] private float cooldownBetweenSkips = 1.0f;
+        private float cooldownBetweenSkips = 0.5f;
         [SerializeField] private TimeSkipEffect timeSkipEffect;
         [SerializeField] private ClockTimeState[] clockStates;
         [FormerlySerializedAs("state")] [SerializeField] private int timeState;
@@ -42,6 +42,7 @@ namespace GameObjects.Puzzle
         [SerializeField] private PuzzleState[] puzzleStatesDefinition;
         private Dictionary<Tuple<int, int>, PuzzleState> puzzleStates;
         private float cooldown;
+        private int previousTimeState;
 
         private void Update()
         {
@@ -63,17 +64,29 @@ namespace GameObjects.Puzzle
             UpdateHiddenObjects();
         }
 
-        public void IncreasePuzzleProgress()
+        public void SetPuzzleProgress(int progress)
         {
-            puzzleProgressState++;
+            puzzleProgressState = progress;
         }
 
-        public void SwitchClockStates()
+        public bool SwitchTime()
         {
-            if (cooldown > 0) return;
+            return SetTime((timeState + 1) % clockStates.Length);
+        }
+
+        public bool SetTime(int time)
+        {
+            if (cooldown > 0) return false;
+            if (time > clockStates.Length || time < 0) throw new Exception("Invalid time state");
             cooldown = cooldownBetweenSkips;
-            clockStates[timeState].SetActive(false);
-            timeState = (timeState + 1) % clockStates.Length;
+            previousTimeState = timeState;
+            timeState = time;
+            return true;
+        }
+
+        public void UpdateObjects()
+        {
+            clockStates[previousTimeState].SetActive(false);
             clockStates[timeState].SetActive(true);
             UpdateHiddenObjects();
             timeSkipEffect.StartEffect();

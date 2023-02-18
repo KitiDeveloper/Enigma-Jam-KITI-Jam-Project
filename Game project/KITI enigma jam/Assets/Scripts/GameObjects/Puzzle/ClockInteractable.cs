@@ -5,15 +5,11 @@ namespace GameObjects.Puzzle
     public class ClockInteractable : Interactable
     {
         [SerializeField] private ClockPuzzle clockPuzzle;
-
-        public void SetParent(ClockPuzzle puzzle)
-        {
-            clockPuzzle = puzzle;
-        }
         
         public override void OnInteract()
         {
-            clockPuzzle.SwitchClockStates();
+            if(clockPuzzle.SwitchTime())
+                clockPuzzle.UpdateObjects();
         }
 
         public override void OnFocus()
