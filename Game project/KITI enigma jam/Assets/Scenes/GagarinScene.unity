@@ -5876,6 +5876,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4146895838329193799}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677787358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4146895838799021465, guid: 0b025928545553c4ab3d29103122ae85,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146895838329193799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83057fa8e0304ca9bb09d88ebc8c94a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1690342478
 GameObject:
   m_ObjectHideFlags: 0
@@ -7141,6 +7153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GhostSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3280531147172863457, guid: 5be7a58f25512394c96ecbd4256aca36,
+        type: 3}
+      propertyPath: ghostSpawnPos
+      value: 
+      objectReference: {fileID: 1677787358}
     - target: {fileID: 3280531147172863459, guid: 5be7a58f25512394c96ecbd4256aca36,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7297,6 +7314,11 @@ PrefabInstance:
     - target: {fileID: 7998113212951580524, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: useFootsteps
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580561, guid: b09765c4b0f61a04da49c40602dd6e2a,

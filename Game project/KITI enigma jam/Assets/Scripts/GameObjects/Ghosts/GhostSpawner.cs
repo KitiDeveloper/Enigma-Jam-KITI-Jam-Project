@@ -5,6 +5,7 @@ namespace GameObjects.Ghosts {
     public class GhostSpawner : Interactable {
 
         private bool wasInteracted = false;
+        [SerializeField] GhostSpawnPoint ghostSpawnPos;
         
         public override void OnInteract() {
             if(wasInteracted) return;
@@ -13,7 +14,7 @@ namespace GameObjects.Ghosts {
         }
 
         private void SpawnGhost() {
-            GhostSpawnController.Instance.SpawnGhostInRandomPoint();
+            GhostSpawnController.Instance.SpawnGhostAtFixedPos(ghostSpawnPos);
             //todo: remove comments after tests
             // wasInteracted = true;
         }

@@ -35,6 +35,12 @@ namespace GameObjects.Ghosts {
             var ghost = Instantiate(_ghostPrefab, GetRandomSpawnPoint().transform.position, Quaternion.identity);
             //todo: you can handle ghost settings here if needed
         }
+
+        public void SpawnGhostAtFixedPos(GhostSpawnPoint point)
+        {
+            var ghost = Instantiate(_ghostPrefab, point.transform.position, Quaternion.identity);
+            //todo: you can handle ghost settings here if needed
+        }
     }
 
 }
