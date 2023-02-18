@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.35179263, g: 0.35906205, b: 0.4035657, a: 1}
+  m_IndirectSpecularColor: {r: 0.3517924, g: 0.35906196, b: 0.40356553, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4071,7 +4071,7 @@ MonoBehaviour:
     - {fileID: 257805924}
     - {fileID: 1727408959}
     - {fileID: 1596474700}
-  - timeState: 0
+  - timeState: 1
     progressState: 1
     gameObjectsToShow:
     - {fileID: 1727408959}
@@ -4194,7 +4194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPuzzleCounter: {fileID: 2096697697}
   clockPuzzle: {fileID: 366057521}
-  finishTimeState: 0
+  finishTimeState: 1
   finishProgressState: 1
 --- !u!1001 &368596714
 PrefabInstance:
