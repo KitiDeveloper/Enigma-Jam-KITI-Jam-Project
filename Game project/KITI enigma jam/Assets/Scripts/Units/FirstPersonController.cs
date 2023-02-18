@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public bool canMove { get; private set; } = true;
+    public bool canMove { get; set; } = true;
     private bool isRunning => canRun && Input.GetKey(RunKey);
     private bool shouldJump => Input.GetKeyDown(JumpKey) && characterController.isGrounded;
     private bool shouldCrouch => Input.GetKeyDown(CrouchKey) && !duringCrouchAnimation && characterController.isGrounded;
@@ -35,6 +35,9 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField, Range(0.01f, 10)] private float lookSpeedY = 2.0f;
     [SerializeField, Range(0.01f, 2)] private float upLookLimit = 2.0f;
     [SerializeField, Range(0.01f, 2)] private float downLookLimit = 2.0f;
+
+    public float lookSpeedXMultiplier = 1;
+    public float lookSpeedYMultiplier = 1;
 
     [Header("Jump Parameter")]
     [SerializeField] private float jumpForce = 8.0f;
@@ -165,10 +168,10 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleMouseLook()
     {
-        rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
+        rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY * lookSpeedYMultiplier;
         rotationX = Mathf.Clamp(rotationX, -upLookLimit, downLookLimit);
         playerCamera.transform.localRotation = quaternion.Euler(rotationX, 0, 0);
-        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX * lookSpeedXMultiplier, 0);
     }
 
     private void HandleJump()
