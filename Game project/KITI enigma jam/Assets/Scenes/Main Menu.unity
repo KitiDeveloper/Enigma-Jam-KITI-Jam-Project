@@ -227,7 +227,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -191.19}
-  m_SizeDelta: {x: 1000, y: 200}
+  m_SizeDelta: {x: 1000, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &99043222
 MonoBehaviour:
@@ -259,12 +259,15 @@ MonoBehaviour:
     (Gagarin)
     - C# programming.
 
-    (AleKape) - Composer & Sound designer.
+    Luca Gentilforti - Composing.
 
-    (Elementus)
-    - Sound design.
+    (AleKape) - Composing
+    & Sound designer.
 
-    (Jairientrouve) - 3D modeling'
+    (Elementus) - Sound design.
+
+    (Jairientrouve) - 3D
+    modeling'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
