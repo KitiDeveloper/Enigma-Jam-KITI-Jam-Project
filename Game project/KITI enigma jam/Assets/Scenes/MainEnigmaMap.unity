@@ -28212,6 +28212,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
+      propertyPath: canRun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: canJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: canCrouch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
       propertyPath: baseStepSpeed
       value: 0.8
       objectReference: {fileID: 0}
@@ -28219,6 +28234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: crouchBobspeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
+        type: 3}
+      propertyPath: willSlideOnSlopes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7998113212951580526, guid: b09765c4b0f61a04da49c40602dd6e2a,
         type: 3}
