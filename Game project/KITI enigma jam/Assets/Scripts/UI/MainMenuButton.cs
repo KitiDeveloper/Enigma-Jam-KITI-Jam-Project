@@ -16,6 +16,7 @@ namespace UI
 
         private void MainMenu()
         {
+            Time.timeScale = 1;
             SceneManager.LoadSceneAsync(mainMenuIndex);
         }
     }
