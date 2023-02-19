@@ -7,13 +7,13 @@ namespace Units.RayCaster {
 
         private Interactable _currentInteractable;
 
-        private bool _canInteract = true;
+        public bool CanInteract { get; set; } = true;
 
         [SerializeField]
         private KeyCode _interactKey = KeyCode.Mouse0;
 
         private void Update() {
-            if (!_canInteract) return;
+            if (!CanInteract) return;
 
             HandleInteractionInput();
 
