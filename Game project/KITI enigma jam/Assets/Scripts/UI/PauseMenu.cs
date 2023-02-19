@@ -12,6 +12,9 @@ namespace UI
         [SerializeField] private RectTransform pauseMenu;
         [SerializeField] private FirstPersonController controller;
         [SerializeField] private ObjectInteracter interacter;
+        [SerializeField] private AudioClip pauseSound;
+        [SerializeField] private AudioSource audioSource;
+        private bool paused;
 
         private void Start()
         {
@@ -22,6 +25,9 @@ namespace UI
 
         public void ShowPauseMenu()
         {
+            if (paused) return;
+            paused = true;
+            audioSource.PlayOneShot(pauseSound);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             controller.canMove = false;
@@ -38,6 +44,7 @@ namespace UI
 
         private void Resume()
         {
+            paused = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             controller.canMove = true;
